@@ -1,0 +1,115 @@
+html body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.gradient {
+  height: 100vh;
+  background-image: linear-gradient(
+    midnightblue,goldenrod,
+    dodgerblue, salmon,
+    Orange, midnightblue, midnightblue );
+  background-size: 200% 2000%;
+  z-index: -1;
+
+  animation-name: gradient;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%
+  }
+  100% {
+    background-position: 0% 100%
+  }
+}
+
+.center {
+  position: fixed;
+  top: 0;
+  display: grid;
+  height: 100vh;
+  margin: 0 50%;
+  transform: translate(-50%, 0);
+  place-items: center center;
+}
+
+.circle {
+  color: white;
+  border: 2px solid white;
+  z-index: 999;
+  width: 90vh;
+  height: 90vh;
+  border-radius: 50%;
+  top: 50%;
+  position: absolute;
+  transform: translate(0,-50%);
+}
+
+#circle2 {
+  position: absolute;
+  color: white;
+  border: 2px solid white;
+  z-index: 999;
+  width: 60vh;
+  height: 60vh;
+  border-radius: 50%;
+
+}
+
+#circle3 {
+  position: fixed;
+  /* top: 50%; */
+  transform: translate(-50%, -50%);
+  color: white;
+  border: 2px solid white;
+  z-index: 999;
+  width: 30vh;
+  height: 30vh;
+
+  border-radius: 50%;
+
+}
+
+
+
+
+/* .shadow {
+    width: 0;
+    height: 0;
+    border-bottom: 40px solid transparent;
+    border-right:40vh solid rgba(255, 255, 255, 0.5);
+    transform: translateY(2px);
+  } */
+
+.pending {
+  right: 2px;
+  position: absolute;
+  left: 50%;
+  background-color: white;
+  width: 45vh;
+  height: 2px;
+  transform-origin: center left;
+  transform-style: preserve-3D;
+
+
+  animation-name: spin;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(315deg);
+  }
+}

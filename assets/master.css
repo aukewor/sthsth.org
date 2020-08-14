@@ -1,0 +1,340 @@
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+*:before,
+*:after {
+ box-sizing: border-box;
+ position: relative;
+}
+
+::selection {
+  background-color: rgba(0,0,0,0.99);
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 32px;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4em;
+
+}
+
+main {
+ min-height: 100vh; /* will cover the 100% of viewport */
+ min-width: 0;
+ overflow-x: hidden;
+ display: block;
+ position: relative;
+ /*padding-bottom: 200px; */
+ /* height of your footer  */
+}
+
+
+footer {
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  /*left: 0;*/
+}
+
+footer:hover {
+  cursor: pointer;
+}
+
+
+h1 {
+  font-weight: 400;
+  font-size: 1em;
+  display: inline-block;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+#date {
+  float: right;
+  margin-top: 10px;
+}
+
+.grid-container {
+  margin: 32px;
+  display: grid;
+   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  padding: 0px;
+  /* height: 36vh; */
+}
+
+#item1 {
+  position: fixed;
+  width: 40vw;
+  overflow-x: hidden;
+}
+
+#item2 {
+  position: absolute;
+  left: 55vw;
+  overflow-x: hidden;
+  width: 40vw;
+  padding-bottom: 60vh;
+}
+
+video,img{
+  max-height: 100%;
+  max-width: 100%;
+}
+
+p {
+  text-align: left;
+  display: inline-block;
+  margin: 0;
+}
+
+
+
+
+.grid-container > div {
+  margin: 0;
+  padding: 0 36px;
+  font-size: 1em;
+  /* height: inherit; */
+}
+
+/* #item1 {
+  position: fixed;
+
+} */
+
+.descriptions {
+  padding-left: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.dot {
+  /* margin-left: 10px;
+  margin-bottom: 0.3em; */
+  /* padding-top: 20px; */
+  background-color: black;
+  width: 24px;
+  height: 24px;
+  display: none;
+  border-radius: 50%;
+  animation-name: dot;
+  animation-duration: 1200ms;
+  animation-iteration-count: infinite;
+  position: fixed;
+  left: 84px;
+  top: 32px;
+  /* float: right; */
+}
+
+
+.header:hover #dot {
+  display: inline-block;
+}
+
+@keyframes dot {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1,p,span {
+  animation-name: blackout;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+
+
+
+  @keyframes blackout {
+    0% {
+      background-color: black;
+    }
+
+    87% {
+      background-color: black;
+      box-shadow: 0 0 6px 4px black;
+    }
+    99% {
+      background-color: black;
+      box-shadow: 0 0 10px 4px black;
+
+    }
+    100% {
+      background-color: inherit;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+  ::selection {
+    background-color: rgba(255,255,255,0);
+    color: black;
+    text-shadow: 0 0 6px black;
+  }
+
+
+  body {
+    margin: 32px;
+    font-family: Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.4em;
+  }
+
+  main {
+   min-width: 0;
+   min-height: 100%; /* will cover the 100% of viewport */
+   overflow: hidden;
+   display: block;
+   position: relative;
+   /* padding-bottom: 200px; /* height of your footer */ */
+  }
+  .grid-container {
+    margin: 100px 32px 100px 32px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows:auto auto auto auto;
+    grid-row-gap: 3em;
+    padding: 0px;
+    height: auto;
+    min-width: 0;
+  }
+
+  .grid-container > div {
+    margin: 0;
+    padding: 0 36px;
+    font-size: 1em;
+    height: auto;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 1em;
+    display: block;
+    position: fixed;
+  }
+
+
+  #date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.5em;
+  }
+
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.5em;
+  }
+}
+
+
+@media only screen and (max-width: 450px) {
+
+  ::selection {
+    background-color: rgba(255,255,255,0);
+    color: black;
+    text-shadow: 0 0 6px black;
+  }
+
+
+  body {
+    word-wrap:break-word;
+    margin: 0px;
+    font-family: Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4em;
+  }
+
+  main {
+   min-width: 0;
+   min-height: auto;
+   overflow: hidden;
+   display: block;
+   position: relative;
+   margin: 0;
+   padding: 0;
+   /* padding-bottom: 200px;
+   /* height of your footer */
+  }
+  .grid-container {
+    margin: 100px 32px 200px 32px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows:auto auto auto auto;
+    grid-row-gap: 3em;
+    padding: 0px;
+    height: auto;
+  }
+
+  .grid-container > div {
+    /* background-color: white; */
+    margin: 24px 0 ;
+    padding: 0 12px;
+    font-size: 1em;
+    height: auto;
+  }
+
+  h1 {
+    margin: 16px;
+    padding: 0;
+    font-weight: 400;
+    font-size: 1em;
+    display: block;
+    position: fixed;
+    /* background-color: white; */
+  }
+
+
+  #date {
+    margin: 16px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.5em;
+  }
+
+
+  footer {
+    margin: 16px;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.5em;
+  }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../assets/favicon-line.png">
+    <link rel="stylesheet" href="../assets/master.css">
+    <link rel="stylesheet" href="../assets/magnific-popup.css">
+    <title>Sthsth.org</title>
+    <style media="screen">
+      iframe {
+        background-color: white;
+        /* position: absolute; */
+        top: 35%;
+        left: 0;
+        width: 100%;
+        height:80vh;
+        z-index: -1;
+        border: 1px solid rgb(250,250,250);
+        }
+
+        a {
+          text-decoration: underline;
+        }
+
+        a.lightbox-link {
+        cursor: zoom-in;
+        display: inline-block;
+        margin: 0;
+        }
+
+        .mfp-bg {
+        background: gray ;
+        opacity: 0.95;
+        }
+
+        .mfp-figure:after {
+        box-shadow: 0 0 0;
+        }
+
+        button.mfp-close {
+        display: none;
+        }
+
+    </style>
+  </head>
+  <body id="top">
+
+<main>
+
+<div class="header">
+  <a href="../index.html">
+  <h1>sthsth</h1>
+  </a>
+  <span class="dot" id="dot"></span>
+</div>
+
+
+  <div class="grid-container">
+
+    <div class="item" id="item1" >
+      <div class="text">
+
+        <p><a target="_blank" href="http://twopiecesofbread.life/score/demo/index.html">Drizzle</a> &nbsp &nbsp &nbsp &nbsp Symphony of . ° and \</p>
+
+        <div class="descriptions">
+          <br>
+          <p>Tap tap, if you are . <br>
+          Snap snap, if you are ° <br>
+          Rub rub, if you are \
+          </p>
+<br>
+          <audio autoplay loop>
+        <source src="drizzle.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="item" id="item2">
+
+      <div class="drizzle">
+        <iframe id="drz" src="http://twopiecesofbread.life/score/demo/index.html"
+         scrolling="yes"
+         frameborder="0";>
+        </iframe>
+       </div>
+
+        <a href="quotations.jpg" class="lightbox-link">
+        <img src="quotations.jpg" ></a>
+
+        <a href="taptap.jpg" class="lightbox-link">
+        <img src="taptap.jpg" ></a>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>It's always something
+    </p>
+  </footer>
+
+  <script src="../assets/jquery.min.js"></script>
+  <script src="../assets/jquery.magnific-popup.min.js"></script>
+  <script>
+  $(function(){
+    $('.lightbox-link').magnificPopup({type:'image'});
+  });
+</script>
+
+  </body>
+</html>
