@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 72px;
+}
+
+.clock {
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  color: #17D4FE;
+  font-size: 0.5em;
+  letter-spacing: 4px;
+  opacity: 0.75;
+}
+
+#instructions {
+  position: absolute;
+  top: 75%;
+  left: 10%;
+  color: black;
+  font-size: 0.5em;
+  letter-spacing: 0.05em;
+  z-index: 1;
+  line-height: 1.4;
+}
+
+
+.period,.quotation,.slash {
+  position: absolute;
+  /* top: 45%;
+  left: 10%; */
+  color: #17D4FE;
+  font-size: 1em;
+  font-weight: 100;
+  z-index: 5;
+  }
+
+.period{
+  position: absolute;
+  top: 45%;
+  left: 90%;
+
+    /* animation */
+  animation-name: swim, swim-vertical;
+  animation-duration: 9s, 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.quotation{
+  position: absolute;
+  top: 65%;
+  left: 0%;
+
+    /* animation */
+  animation-name: swim, swim-vertical;
+  animation-duration: 7s, 10s;
+  animation-delay: -5.5s, -3.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+.slash{
+  position: absolute;
+  top: 85%;
+  left: 67%;
+
+    /* animation */
+  animation-name: swim, swim-vertical;
+  animation-duration: 8s, 2s;
+  animation-delay: -4.6s, -1.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+::selection {
+  background: #17D4FE;
+  color: white;
+}
+
+.title {
+  position: absolute;
+  top: 10%;
+  left: 55%;
+  color: black;
+  letter-spacing: 4px;
+}
+
+#fsbn {
+  background-color: black;
+  width: 80px;
+  font-size: 0.2em;
+  font-weight: lighter;
+  text-align: center;
+  padding: 8px;
+  color: white;
+  position: absolute;
+  top: 29%;
+  left: 35%;
+  z-index: 4;
+  border-radius: 6px;
+
+}
+
+#fsbn:hover {
+  box-shadow: 0 0 50vh 50vh #17D4FE;
+  background-color: darkgray;
+  cursor: pointer;
+}
+
+
+#clbn:hover {
+  box-shadow: 0 0 50vh 50vh #17D4FE;
+  background-color: #17D4FE;
+  cursor: pointer;
+}
+
+#clbn {
+  border-radius: 50%;
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  margin: 0;
+  left: -40px;
+  top: -40px;
+  z-index: 999;
+  display: none;
+}
+
+iframe {
+  background-color: white;
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  width: 63%;
+  height:62vh;
+  z-index: -1;
+}
+
+@keyframes swim {
+  0% {
+    left: 0vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+
+@keyframes swim-vertical {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100vh;
+  }
+}

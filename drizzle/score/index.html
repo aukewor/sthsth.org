@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Score</title>
+  </head>
+  <body>
+
+    <div id="MyClockDisplay" class="clock" onload="showTime()">
+    </div>
+
+
+    <div id="title" class="title">
+      Drizzle<br>
+      Symphony of . ° and \
+    </div>
+
+    <div id="flying">
+    <div class="period">
+      .
+    </div>
+    <div class="quotation">
+      °
+    </div>
+    <div class="slash">
+      \
+    </div>
+    </div>
+
+    <div id="instructions">
+      tap tap, if you are . <br>
+      scratch scratch, if you are ° <br>
+      rub rub, if you are \
+    </div>
+
+
+    <!-- the fullscreen button here -->
+    <p id="fsbn" onclick="fullscreen()" style="letter-spacing: 0.3em">////</p>
+    
+    <!-- embedded website -->
+    <div class="drizzle">
+    <iframe id="drz" src="demo/index.html"
+      scrolling="yes"
+      frameborder="0";>
+    </iframe>
+    </div>
+
+    <!-- close button here -->
+    <p id="clbn" onclick="shutdown()"></p>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
