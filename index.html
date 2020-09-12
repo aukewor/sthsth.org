@@ -2,152 +2,112 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/favicon-line.png">
-    <title>Sthsth.org</title>
+    <title>MIANWEIWANG</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
-  <body id="top">
+  <body>
+  <!-- <select class="filter" name="dropdown">
+    <option value="bionic">bionic</option>
+    <option value="fictional">fictional</option>
+    <option value="dispersed">dispersed</option>
+  </select> -->
 
-    <main >
+  <div class="refresh">
+    <a onClick="window.location.reload();"> &#10087;</a>
+  </div>
 
-    <a href="index.html">
-    <h1>sthsth</h1></a>
+  <div id="selector">
+    <a href="#" class="ontology" rel="ontology">ontology = function; </a>
+    <a href="#" class="exhaustion" rel="exhaustion">exhaustion = complexity; </a>
+    <a href="#" class="plurality" rel="plurality">plurality = anonymity; </a>
+    <a href="#" class="dispel" rel="dispel">simulacrum = dispel; </a>
+    <a href="#" class="semantics" rel="semantics">semantics = placeholder; </a>
+    <a href="#" class="meaning" rel="meaning">meaning = meeting; </a>
+    <a href="#" class="equivocate" rel="equivocate">equivocate = resistance；</a>
+  </div>
 
-    <p id="date">
-    </p>
+  <ul id="container">
+    <li class="dispel ontology equivocate">
+      <img src="water2.png" alt="">
+    </li>
+    <li class ="dispel exhaustion">
+      <img src="watermol.png" alt="">
+    </li>
+    <li class ="plurality exhaustion">
+      <img src="textbooks.jpg" alt="">
+    </li>
+    <li class ="plurality meaning">
+      <img src="drizzle.png" alt="">
+    </li>
+    <li class="meaning">
+      <img src="borders.jpg" alt="">
+    </li>
+    <li class="dispel plurality exhaustion">
+      <img src="debussy.png" alt="">
+    </li>
+    <li class="semantics">
+      <img src="bell.jpg" alt="">
+    </li>
+    <li class="meaning exhaustion">
+      <img src="2.gif" style="width:100px; padding:50px;">
+    </li>
 
-    <div class="grid-container">
-
-      <div class="item" id="item1">
-        <div class="dot" id="dot1"></div>
-        <div class="descriptions">
-          <a >
-            Memory</a>
-        </div>
-      </div>
-
-
-      <div class="item" id="item2">
-        <a>Airplane Series-II</a>
-        <div class="dot" id="dot2"></div>
-        <div class="descriptions">
-          <a href="solar-gradient/index.html" target="_blank">
-            Solar Gradient</a> <br>
-          <a href="airplane-window/index.html" target="_blank">
-            Airplane Window</a><br>
-          <a href="vomit-online/index.html" target="_blank">
-            Vomit Online</a>
-
-        </div>
-      </div>
-
-      <div class="item" id="item3">
-        <div class="dot" id="dot3"></div>
-        <div class="descriptions">
-          <a href="space-time/index.html" target="_blank">
-            Space-Time</a>
-        </div>
-      </div>
-
-
-      <div class="item" id="item4">
-        <div class="dot" id="dot4"></div>
-        <div class="descriptions">
-          <a >
-            Airplane Series-I</a>
-        </div>
-      </div>
-
-
-
-      <div class="item" id="item5">
-        <div class="dot" id="dot5"></div>
-        <div class="descriptions">
-          <a href="foley-art/index.html" target="_blank">
-            Foley Art</a>
-        </div>
-      </div>
-
-      <div class="item" id="item6">
-        <div class="dot" id="dot6"></div>
-        <div class="descriptions">
-          <a >
-          Why are the spots of light in the shadows of trees always round? <br>
-
-          </a>
-        </div>
-      </div>
-
-
-      <div class="item" id="item7">
-        <div class="dot" id="dot7"></div>
-        <div class="descriptions">
-          <a href="drizzle/index.html">
-            Drizzle</a>
-        </div>
-      </div>
-
-
-
-      <div class="item" id="item8">
-        <div class="dot" id="dot8"></div>
-        <div class="descriptions">
-          <a href="language-or-tone/index.html" target="_blank">
-            Language or Tone?</a>
-        </div>
-      </div>
-
-
-
-
-      <div class="item" id="item9" >
-        <div class="dot" id="dot9"></div>
-        <div class="descriptions">
-          <a >
-            Log.Bug.Waterdrop
-          </a>
-        </div>
-      </div>
-
-
-      <div class="item" id="item10">
-        <div class="dot" id="dot10"></div>
-        <div class="descriptions">
-          <a >
-            51-Image World</a>
-        </div>
-      </div>
-
-
-      <div class="item" id="item12">
-        <div class="dot" id="dot12"></div>
-        <div class="descriptions">
-          <a >
-            Irregular Wind</a>
-        </div>
-      </div>
-
-
-
-    </div>
-
-    <footer>
-      <p>Something something
-      </p>
-      <!-- <img src="assets/vomitbag.png" alt=""> -->
-
-    </footer>
-
-    </main>
-
-    <script>
-
-
-        var d = new Date();
-        document.getElementById("date").innerHTML = d.toDateString();
-
-    </script>
-
+    <li class="plurality equivocate" >
+      <img src="thispersondoesnotexist.jpg" alt="">
+    </li>
+  </ul>
   </body>
+  <script type="text/javascript">
+
+    // shuffler
+    function shuffle(elems) {
+
+        allElems = (function(){
+    	var ret = [], l = elems.length;
+    	while (l--) { ret[ret.length] = elems[l]; }
+    	return ret;
+        })();
+
+        var shuffled = (function(){
+            var l = allElems.length, ret = [];
+            while (l--) {
+                var random = Math.floor(Math.random() * allElems.length),
+                    randEl = allElems[random].cloneNode(true);
+                allElems.splice(random, 1);
+                ret[ret.length] = randEl;
+            }
+            return ret;
+        })(), l = elems.length;
+
+        while (l--) {
+            elems[l].parentNode.insertBefore(shuffled[l], elems[l].nextSibling);
+            elems[l].parentNode.removeChild(elems[l]);
+        }
+
+    }
+    // Usage:
+    shuffle(document.getElementsByTagName('li') );
+
+    // selector
+    $('#selector a').click(function(event){
+        event.preventDefault();
+        var $this = $(this),
+            target = $this.attr('rel');
+        $('#selector a').removeClass('active');
+        $this.addClass('active');
+
+        // $('#selector a').addClass('inactive');
+        // $('#selector a.'+target).removeClass('inactive').addClass('active');
+
+
+        $('#container li').addClass('inactive');
+        $('#container li.'+target).removeClass('inactive').addClass('active');
+    });
+
+
+
+
+  </script>
+
 </html>
