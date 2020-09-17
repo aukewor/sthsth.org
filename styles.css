@@ -4,8 +4,11 @@ body {
   font-size: 44px;
   margin: 0;
   padding: 0;
-  position: absolute;
-
+  /* position: absolute; */
+  background-image: url("Krtek.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 154vw;
 }
 select {
   font-size: 21px;
@@ -17,18 +20,6 @@ select {
   border-radius: 12px;
 }
 
-#container {
-  left: 36vw;
-  position: absolute;
-  height: 100vh;
-  margin: 15px;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  flex-direction: column;
-  justify-content: flex-start;
-}
 
 div {
   position: fixed;
@@ -43,19 +34,7 @@ a {
   text-decoration: none;
 }
 
-/* #container li img {
-  width: inherit;
-  border-radius: 15px;
-} */
 
-#container li img{
-  /* height: 300px; */
-  margin: 45px;
-  width: 24vw;
-  box-shadow: inset 0px 0px 8px lightgray;
-  border-radius: 15px;
-
-}
 
 #selector a.active {
   color: red;
@@ -65,15 +44,15 @@ a {
   display: none;
 }
 
-#container li.inactive {
-  display: none;
-}
-
 .refresh a{
   z-index: 999;
   font-size: 1.5em;
   position: fixed;
+<<<<<<< Updated upstream
   bottom: 2%;
+=======
+  bottom: 0;
+>>>>>>> Stashed changes
 }
 
 .refresh a:hover {
