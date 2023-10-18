@@ -2,10 +2,7 @@
   "name": "sthsth.org",
   "type": "module",
   "version": "0.0.1",
-  "homepage": "https://aukewor.github.io/sthsth.org",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
