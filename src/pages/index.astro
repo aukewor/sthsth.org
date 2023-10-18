@@ -5,18 +5,14 @@ import Logo from "../components/Logo.astro";
 
 <Layout title="Something Something ORG">
   <main>
-    <div class="grid">
       <div class="cell"><Logo /></div>
-      <div class="cell"></div>
-      <div class="cell"><Logo /></div>
-      <div class="cell"></div>
-      <div class="cell"><Logo /></div>
-      <div class="cell"></div>
-      <div class="cell"><Logo /></div>
-      <div class="cell"></div>
-      <div class="cell"><Logo /></div>
-    </div>
   </main>
+
+  <div class="progress">
+    <div id="progressBar" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+    </div>
+  </div>
+  
 </Layout>
 
 <style lang="scss">
@@ -30,15 +26,12 @@ import Logo from "../components/Logo.astro";
     grid-template-rows: repeat(3, 1fr);
     height: 100%;
     width: 100%;
+    overflow: hidden;
   }
 
   .cell {
     width:100%;
-    overflow: hidden;
-    // border: 1px solid aqua;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    overflow: visible;
   }
 
   @keyframes fadeout {
@@ -61,19 +54,19 @@ import Logo from "../components/Logo.astro";
 const header = document.querySelectorAll("header");
 const longSpan = document.querySelectorAll("span.long");
 const shortSpan = document.querySelectorAll("span.short");
-const grid = document.querySelector(".grid");
+// const grid = document.querySelector(".grid");
 
 header.forEach((ele, i) => {
-    ele.addEventListener("mouseenter", function () {
+    ele.addEventListener("click", function () {
         longSpan[i].classList.toggle("is-shown");
         shortSpan[i].classList.toggle("is-shown");
     });
 });
 
-grid.addEventListener("click", function () {
-    this.classList.add("fade-out");
-    setTimeout(function () {
-        grid.remove();
-    }, 1200);
-});
+// grid.addEventListener("click", function () {
+//     this.classList.add("fade-out");
+//     setTimeout(function () {
+//         grid.remove();
+//     }, 1200);
+// });
 </script>

@@ -1,8 +1,11 @@
 {
-  "name": "stellar-star",
+  "name": "sthsth.org",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://aukewor.github.io/sthsth.org",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -13,6 +16,7 @@
     "astro": "^3.3.1"
   },
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "sass": "^1.69.4"
   }
 }

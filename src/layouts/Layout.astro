@@ -1,11 +1,12 @@
 ---
+import '../scss/main.scss'
+
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
 ---
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -21,47 +22,6 @@ const { title } = Astro.props;
   </body>
 </html>
 <style is:global lang="scss">
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-	--logo-type-size: 120px;
-	@media screen and (max-width: 1024px) {
-		--logo-type-size: 80px;
-	}
-	@media screen and (max-width: 600px) {
-		--logo-type-size: 60px;
-	}
-
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    /* background: #13151a; */
-    background-size: 224px;
-  }
-  code {
-    font-family:
-      Menlo,
-      Monaco,
-      Lucida Console,
-      Liberation Mono,
-      DejaVu Sans Mono,
-      Bitstream Vera Sans Mono,
-      Courier New,
-      monospace;
-  }
-
   body {
 		margin: auto;
 		min-height: 100vh;
