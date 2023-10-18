@@ -5,7 +5,7 @@
   "homepage": "https://aukewor.github.io/sthsth.org",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
